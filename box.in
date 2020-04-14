@@ -1,0 +1,47 @@
+long_range 0
+output box_test
+direction 1 1 0
+kb 1.38064852e-23
+T 273.0
+n 1.8748e+27
+#n 1.100125e+27
+#n 1e20
+#box_len 3.657813e-4 7.315626e-9 3.657813e-4
+#box_len 3.657813e-4 1.8289065e-8 3.657813e-4
+#box_len 1.0 2.914264e-8 1.0
+box_len  1.0 8.51275e-9  1.0 
+#box_len 1.678401e-1 1.678401e-1 1.0
+N 10000
+sigma 4.17e-10
+#mass 6.6335214e-26
+mass 6.6335214e-26
+steps 100000000
+U0 0.0 0.0 0.0
+### collision model : CBA_HS or DSMC
+model DSMC_VHS
+#model SPH
+#model FP_ideal_gas
+#model FP_dense
+#model CBA_VHS
+#model FP_linear
+#model none
+num_realizations 1
+movie 0
+#after 500
+after 1000
+num_cells  10 10  1
+num_thr 1
+every 500
+problem 1 ##1 closed box, 2: couette flow
+U_wall_1  0.0
+U_wall_2  0.0
+U_wall_3  0.0
+U_wall_4  0.0
+T_wall_1  273.0
+T_wall_2  273.0
+T_wall_3  273.0
+T_wall_4  273.0
+mu 2.117e-5
+frac_mft 0.1
+visp 0.5
+nualpha 1.4

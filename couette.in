@@ -1,0 +1,33 @@
+long_range 0
+output box_test
+direction 0 1 0
+kb 1.38064852e-23
+T 273.0
+n 1.0e+20
+box_len  1.0 1.0  1.0 
+N 100000
+mass 6.6335214e-26
+sigma 3.405e-10
+steps 100000000
+U0 0.0 0.0 0.0
+### collision model : FP or DSMC, ...
+model DSMC_VHS
+num_realizations 1
+movie 0
+after 1000
+num_cells  1 50  1
+num_thr 1
+every 500
+problem 2 ##1 closed box, 2: couette flow
+U_wall_1  100.0
+U_wall_2  -100.0
+U_wall_3  0.0
+U_wall_4  0.0
+T_wall_1  273.0
+T_wall_2  273.0
+T_wall_3  273.0
+T_wall_4  273.0
+mu 2.117e-5
+frac_mft 0.5
+visp 0.5
+nualpha 1.4
